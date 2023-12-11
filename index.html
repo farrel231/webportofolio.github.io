@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Sidebar Menu</title>
+	<script src="pace.min.js"></script>
+	<link href="pace-theme-minimal.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+
+	<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<link href="css/sb-admin.css" rel="stylesheet">
+
+<!-- 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.foundation.min.css"> -->
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="navigation">
+		<ul>
+			<li class="aktif">
+				<a href="#">
+					<span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+					<span class="title aktif">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+					<span class="title">Courses</span>
+				</a>
+			</li>
+			<li>
+				<a href="soal.html">
+					<span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+					<span class="title">Question Bank</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+					<span class="title">Exam Paper</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+					<span class="title">Conduct Exam</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+					<span class="title">Setting</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+					<span class="title">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<section>
+		<div class="header">
+			<div class="subheader notification"><img src="bell.png" alt=""></div>
+			<div class="subheader setting"><img src="settings.png" alt=""></div>
+			<div class="subheader profile"><img src="watch4.jpg" alt=""></div>
+		</div>
+		<div class="content">
+			<div class="title">Selamat Datang, Farrel!</div>
+			<div class="search"></div>
+		</div>
+
+		<div class="info">
+			<div class="title">Informasi Akun</div>
+			<div class="tabel">
+				<table>
+					<tbody>
+						<tr>
+							<td>NISN</td>
+							<td>0000000001</td>
+						</tr>
+						<tr>
+							<td>Nama</td>
+							<td>Farrel Jahfal A. R.</td>
+						</tr>
+						<tr>
+							<td>Jenis Kelamin</td>
+							<td>Laki-laki</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>farreljar23@gmail.com</td>
+						</tr>
+						<tr>
+							<td>Jurusan</td>
+							<td>RPL</td>
+						</tr>
+						<tr>
+							<td>Kelas</td>
+							<td>XII RPL 1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+	</section>
+	<div class="toggle" onclick='toggleMenu();'></div>
+
+<!-- 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.foundation.min.js"></script> -->
+
+	<script type="text/javascript">
+		function toggleMenu(){
+			let navigation = document.querySelector('.navigation');
+			let toggle = document.querySelector('.toggle');
+			navigation.classList.toggle('active');
+			toggle.classList.toggle('active');
+		}
+
+		function mouseOver() {
+			document.getElementById("demo").style.color = "red";
+		}
+	</script>
+	<script src="vendor/datatables/jquery.dataTables.js"></script>
+	<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Page level plugin JavaScript-->
+	<script src="vendor/datatables/jquery.dataTables.js"></script>
+	<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin.min.js"></script>
+
+	<!-- Demo scripts for this page-->
+	<script src="js/demo/datatables-demo.js"></script>
+
+</body>
+</html>

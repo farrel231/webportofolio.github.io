@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nocturnal | The New & Awesome Exam Experience</title>
+	<script src="pace.min.js"></script>
+	<link href="pace-theme-minimal.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+
+	<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<link href="css/sb-admin.css" rel="stylesheet">
+
+<!-- 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.foundation.min.css"> -->
+
+	<link rel="stylesheet" href="css/style - Copy.css">
+</head>
+<body>
+	<div class="navigation">
+		<ul>
+			<img src="Untitled-1.png" alt="">
+		</ul>
+		<ul>
+			<li>
+				<a href="dashboard.html">
+					<span class="icon aktif"><i class="fa fa-home big" aria-hidden="true"></i></span>
+				</a>
+			</li>
+			<li>
+				<a href="daftar-user.html">
+					<span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+				</a>
+			</li>
+			<li class="aktif">
+				<a href="list-ujian.html">
+					<span class="icon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+				</li>
+				<li>
+					<a href="hasil-ujian.html">
+						<span class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+					</a>
+				</li>
+				<li>
+					<a href="tambah-guru.html">
+						<span class="icon"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="logo-judul">
+			<div style="display: flex; justify-content: center; flex-direction: row;">
+				<!-- <div class="judul">Dashboard</div> -->
+				<div class="searchBox">
+					<div class="searchImg"><i class="fa fa-search"></i></div>
+					<input type="search" name="" placeholder="Looking for something?">
+				</div>
+			</div>
+			<div class="toggle" onclick="toggleMenu();" style="background: url('menu.png');"></div>
+			<div class="userArea" onclick="userArea();">
+				<img src="watch4.jpg">
+				<div class="username">Farrel Jahfal &#9662;</div>
+			</div>
+		</div>
+		<section>
+			<div class="baris" style="justify-content: flex-start;">
+				<div class="section-judul">
+					<div class="tanggal">
+						<script type="text/javascript">
+							var today= new Date()
+							var arrayhari = ["Senin","Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"]
+							var arraybulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"]
+							var tahun = today.getFullYear()
+							var bulan = today.getMonth()
+							var tanggal = today.getDate()
+							var hari = today.getDay()
+							document.write(arrayhari[hari-1]+", "+tanggal+" "+arraybulan[bulan]+" "+tahun)
+						</script>
+					</div>
+					<div>List Ujian</div>
+				</div>
+			</div>
+			<div class="baris" style="justify-content: flex-start;">
+				<div class="project-total">
+					<div class="group">
+						<div class="total-num">5</div>
+						<div class="total-judul">Total Ujian</div>
+					</div>
+					<div class="group">
+						<div class="total-num">2</div>
+						<div class="total-judul">Akan Datang</div>
+					</div>
+				</div>
+			</div>
+			<div class="baris user">
+				<div class="actionUserArea">
+					<div class="actionUser">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+						<div class="tindakan">Hapus</div>
+					</div>
+					<div class="actionUser tambah">
+						<a href="">+<span> &nbsp;Tambah Data</span></a>
+					</div>
+				</div>
+				<div class="mapelList">
+
+					<table>
+						<tr class="off">
+							<td class="pertama">
+								<label style="cursor: pointer; margin: 0 20px 0 0">
+									<div class="sub-judul-mapel">
+										<input type="checkbox" name="">
+										<i></i>
+									</div>
+								</label>
+								<div class="group-mapel">
+									<div class="namaCard mapel">Pemrograman Mobile</div>
+									<div class="tgl">Upload Time: 1 April 2020 15.00</div>
+								</div>
+							</td>
+							<td class="kedua">
+								<div class="aksi">
+									<div class="detail">Detail</div>
+									<div class="status-off">Offline</div>
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								</div>
+							</td>
+						</tr>
+
+						<tr class="off">
+							<td class="pertama">
+								<label style="cursor: pointer; margin: 0 20px 0 0">
+									<div class="sub-judul-mapel">
+										<input type="checkbox" name="">
+										<i></i>
+									</div>
+								</label>
+								<div class="group-mapel">
+									<div class="namaCard mapel">Pemrograman Mobile</div>
+									<div class="tgl">Upload Time: 1 April 2020 15.00</div>
+								</div>
+							</td>
+							<td class="kedua">
+								<div class="aksi">
+									<div class="detail">Detail</div>
+									<div class="status-off">Offline</div>
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="pertama">
+								<label style="cursor: pointer; margin: 0 20px 0 0">
+									<div class="sub-judul-mapel">
+										<input type="checkbox" name="">
+										<i></i>
+									</div>
+								</label>
+								<div class="group-mapel">
+									<div class="namaCard mapel">Pemrograman Mobile</div>
+									<div class="tgl">Upload Time: 1 April 2020 15.00</div>
+								</div>
+							</td>
+							<td class="kedua">
+								<div class="aksi">
+									<div class="detail">Detail</div>
+									<div class="status">Online</div>
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+
+				</div>
+			</div>
+			<div class="userclick">
+				<img src="watch4.jpg">
+				<div class="nama">Farrel Jahfal</div>
+				<div class="group">
+					<div class="keluar">Logout</div>
+					<div class="close" onclick="userArea();">Batal</div>
+				</div>
+			</div>
+			<div class="nav">
+				<div class="close"></div>
+				<ul>
+					<li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="daftar-user.html">Daftar User</a></li>
+					<li><a href="list-ujian.html">List Ujian</a></li>
+					<li><a href="hasil-ujian.html">Hasil Ujian</a></li>
+					<li><a href="tambah-guru.html">Tambah Guru</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</div>>
+		</section>
+<!-- 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.foundation.min.js"></script> -->
+
+	<script type="text/javascript" src="script.js"></script>
+	<script src="vendor/datatables/jquery.dataTables.js"></script>
+	<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Page level plugin JavaScript-->
+	<script src="vendor/datatables/jquery.dataTables.js"></script>
+	<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin.min.js"></script>
+
+	<!-- Demo scripts for this page-->
+	<script src="js/demo/datatables-demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: rgb(106,213,255);
+  background: linear-gradient(90deg, rgba(106,213,255,1) 0%, rgba(136,51,255,1) 30%, rgba(106,213,255,1) 100%);
+  border-bottom: .5px solid #abab;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 7px;
+}
